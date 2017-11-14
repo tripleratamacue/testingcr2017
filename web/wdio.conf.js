@@ -7,7 +7,10 @@ assert = chai.assert;
 
 
 exports.config = {
-    
+ 
+    adminEmail: 'wdio@testingcr.com',
+    password: 'automat10n',    
+
     //
     // =================
     // Service Providers
