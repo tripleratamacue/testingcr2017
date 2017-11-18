@@ -7,9 +7,9 @@ module.exports = function() {
     });
 
     //log in as any user, or a default one predefine.
-    this.Given(/^Go$/, function() {
-        console.log("tasss");
-        //Signin.login(browser.options.email, browser.options.password);
+    this.Given(/^(?:I am logged|I'm logged|I log) in$/, function() {
+        console.log("given");
+        Signin.login(browser.options.email, browser.options.password);
     });
 
 };

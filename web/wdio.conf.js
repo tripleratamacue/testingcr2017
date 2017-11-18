@@ -1,9 +1,9 @@
-// let chalk = require('chalk');
-// tiza = chalk;
+let chalk = require('chalk');
+tiza = chalk;
 
-// let chai = require('chai');
-// expect = chai.expect;
-// assert = chai.assert;
+let chai = require('chai');
+expect = chai.expect;
+assert = chai.assert;
 
 
 exports.config = {
@@ -160,7 +160,7 @@ exports.config = {
     // reporters: ['dot'],//
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['./tests/step-definitions/given.js'],//,'./tests/step-definitions/when.js','./tests/step-definitions/then.js'],        // <string[]> (file/dir) require files before executing features
+        require: ['./tests/step-definitions/given.js','./tests/step-definitions/when.js','./tests/step-definitions/then.js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
@@ -206,8 +206,11 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        console.log(chalk.yellow.bold("***Before Method***"));
+        console.log(chalk.yellow.bold("BASE URL: " + browser.options.baseUrl));
+        browser.url(browser.options.baseUrl);        
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
