@@ -1,7 +1,7 @@
 // Signin Page Object
 var BaseClass = require('./baseClass.js');
-var Header = require('./header.js');
-var Modals = require('./modals.js');
+// var Header = require('./header.js');
+// var Modals = require('./modals.js');
 
 var Signin = Object.create(BaseClass, {
 
@@ -20,7 +20,7 @@ registerLink:       { get: function () { return 'a[href="/signup"]'; } },
 /**
  * signup
  *
- * @summary Logs in to SM with user and password parameters
+ * @summary Logs in to system with user and password parameters
  */
 login: { value: function(user, password) {
     console.log('***Logging in email: ' + tiza.yellow(user) + ' and password: ' + tiza.yellow(password));

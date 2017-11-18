@@ -1,14 +1,14 @@
-let chalk = require('chalk');
-tiza = chalk;
+// let chalk = require('chalk');
+// tiza = chalk;
 
-let chai = require('chai');
-expect = chai.expect;
-assert = chai.assert;
+// let chai = require('chai');
+// expect = chai.expect;
+// assert = chai.assert;
 
 
 exports.config = {
  
-    adminEmail: 'wdio@testingcr.com',
+    email: 'wdio@testingcr.com',
     password: 'automat10n',    
 
     //
@@ -19,8 +19,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: process.env.SL_USER,
-    key: process.env.SL_PASS,
+    //user: process.env.SL_USER,
+    //key: process.env.SL_PASS,
     
     
     //
@@ -33,7 +33,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './tests/features/*.feature'
+        './tests/features/loginLogout.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -92,7 +92,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    //logLevel: 'error',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -160,7 +160,7 @@ exports.config = {
     // reporters: ['dot'],//
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['./tests/step-definitions'],        // <string[]> (file/dir) require files before executing features
+        require: ['./tests/step-definitions/given.js'],//,'./tests/step-definitions/when.js','./tests/step-definitions/then.js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         compiler: [],       // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
@@ -171,7 +171,7 @@ exports.config = {
         source: true,       // <boolean> hide source uris
         profile: [],        // <string[]> (name) specify the profile to use
         strict: false,      // <boolean> fail if there are any undefined or pending steps
-        tags: ['@smoke'],           // <string[]> (expression) only execute the features or scenarios with tags matching the expression
+        //tags: ['@smoke'],           // <string[]> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 20000,     // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
     },
