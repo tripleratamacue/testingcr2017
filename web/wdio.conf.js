@@ -8,9 +8,9 @@ assert = chai.assert;
 
 exports.config = {
  
+    globalDelay: 30000,  
     email: 'wdio@testingcr.com',
     password: 'automat10n',    
-
     //
     // =================
     // Service Providers
@@ -19,10 +19,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    //user: process.env.SL_USER,
-    //key: process.env.SL_PASS,
-    
-    
+    //user: process.env.SAUCE_USERNAME,
+    //key: process.env.SAUCE_ACCESS_KEY,
     //
     // ==================
     // Specify Test Files
@@ -33,7 +31,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './tests/features/loginLogout.feature'
+        './tests/features/registerAndLogin.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -114,7 +112,7 @@ exports.config = {
     baseUrl: 'https://testingcr-demo.glitch.me',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 20000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
@@ -172,7 +170,7 @@ exports.config = {
         profile: [],        // <string[]> (name) specify the profile to use
         strict: false,      // <boolean> fail if there are any undefined or pending steps
         //tags: ['@smoke'],           // <string[]> (expression) only execute the features or scenarios with tags matching the expression
-        timeout: 20000,     // <number> timeout for step definitions
+        timeout: 80000,     // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false, // <boolean> Enable this config to treat undefined definitions as warnings.
     },
     
