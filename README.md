@@ -18,11 +18,9 @@ Demo automation project for testingCR demo 2017. WebdriverIO
 * *** To see version of all dependencies check package.json file. 
 
 # How to run:
-npm install --no-save
-locally
-./node_modules/.bin/wdio wdio.conf.js
-cloud
-./node_modules/.bin/wdio saucelabs.conf.js
+* install dependencies: `npm install --no-save`
+* locally: `./node_modules/.bin/wdio wdio.conf.js`
+* cloud: `./node_modules/.bin/wdio saucelabs.conf.js`
 
 
 # How to get Setup:
