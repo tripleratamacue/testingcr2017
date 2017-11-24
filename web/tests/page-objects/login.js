@@ -1,4 +1,4 @@
-// Signin Page Object
+// Login Page Object
 var BaseClass = require('./baseClass.js');
 
 var Login = Object.create(BaseClass, {
@@ -23,7 +23,7 @@ logoutLink:           { get: function () { return '.col-md-6.col-md-offset-3>p>a
 * Methods: define or overwrite page methods.
 */
 /**
- * signup
+ * login
  *
  * @summary Logs in to system with user and password parameters
  */
@@ -33,6 +33,8 @@ login: { value: function(user, password) {
     this.setValue(this.usernameBox, user);
     this.setValue(this.passwordBox, password);
     this.click(this.signInButton);
+    //brower.screenshot();
+    browser.pause(50000);
     browser.waitForVisible(this.logoutLink, browser.options.globalDelay);    
 }},
 logout: { value: function() {

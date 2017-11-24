@@ -36,6 +36,7 @@ register: { value: function(user, password) {
     this.setValue(this.usernameBox, user);
     this.setValue(this.passwordBox, password);
     this.click(this.registerButton);
+    browser.pause(5000);
     browser.waitForVisible(Login.alertDiv, browser.options.globalDelay);
 }}
 

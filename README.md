@@ -21,7 +21,11 @@ Demo automation project for testingCR demo 2017. WebdriverIO
 * install dependencies: `npm install --no-save`
 * locally: `./node_modules/.bin/wdio wdio.conf.js`
 * cloud: `./node_modules/.bin/wdio saucelabs.conf.js`
+* make sure you define your SauceLabs credentials like:
+`export SAUCE_ACCESS_KEY=###`
 
+
+` export SAUCE_USERNAME=@#$!@#`
 
 # How to get Setup:
 #### 1. Prerequisits ####
